@@ -134,7 +134,8 @@ function handlePointerMove(event: PointerEvent) {
   updateCursor();
 
   if (intersectingHandles.length > 0) {
-    event.preventDefault();
+    console.log('move prevent');
+    // event.preventDefault();
   }
 }
 
@@ -146,7 +147,8 @@ function handlePointerUp(event: ResizeEvent) {
   isPointerDown = false;
 
   if (intersectingHandles.length > 0) {
-    event.preventDefault();
+    console.log('up prevent');
+    // event.preventDefault();
   }
 
   updateResizeHandlerStates("up", event);
